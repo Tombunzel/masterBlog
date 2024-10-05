@@ -1,0 +1,105 @@
+/* General Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Form Container */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto; /* Center the form */
+}
+
+/* Form Elements */
+label {
+    display: block; /* Ensures each label is on a new line */
+    margin: 10px 0 5px; /* Spacing around labels */
+    font-weight: bold; /* Bold labels for clarity */
+    color: #333; /* Dark gray color for text */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width input */
+    padding: 10px; /* Padding inside input */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensures padding does not affect width */
+    font-size: 16px; /* Larger font size for readability */
+}
+
+/* Common Button Styles */
+.like-button, .add-button, .update-button, .delete-button {
+    display: inline-block;
+    padding: 10px 15px; /* Padding around button */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-top: 20px; /* Add some space above the button */
+}
+
+/* Like Button Styles */
+.like-button {
+    background-color: #cc4ee8; /* Red background */
+    color: white; /* White text */
+}
+
+.like-button:hover {
+    background-color: #9d48b0; /* Darker red on hover */
+}
+
+/* Specific Button Styles */
+.add-button {
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+}
+
+.add-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.update-button {
+    background-color: #8cd24f; /* Blue background */
+    color: white; /* White text */
+}
+
+.update-button:hover {
+    background-color: #7cb649; /* Darker blue on hover */
+}
+
+.delete-button {
+    background-color: #e74c3c; /* Red background for delete button */
+    color: white; /* White text */
+}
+
+.delete-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #4F4F4F;
+}
+
+.post {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.post p {
+    margin: 10px 0;
+}
