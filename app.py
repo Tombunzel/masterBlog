@@ -5,17 +5,20 @@ app = Flask(__name__)
 
 
 def get_posts():
-    with open("data.json", "r") as handle:
+    """get posts from file"""
+    with open("data.json", "r", encoding="utf-8") as handle:
         posts = json.load(handle)
     return posts
 
 
 def write_posts(posts):
-    with open("data.json", "w") as handle:
+    """write posts to file"""
+    with open("data.json", "w", encoding="utf-8") as handle:
         json.dump(posts, handle, indent=4)
 
 
 def get_post_by_id(posts, post_id):
+    """get post by ID"""
     post = next((p for p in posts if p['id'] == post_id), None)
     return post
 
@@ -31,7 +34,8 @@ def index():
 def add():
     """add a post to data
     if GET method: render the add.html form-page to add a post
-    if POST method: update the data and redirect to home"""
+    if POST method: update the data and redirect to home
+    """
     if request.method == 'POST':
         posts = get_posts()
         author = request.form['author']
@@ -68,7 +72,8 @@ def delete(post_id):
 def update(post_id):
     """update a post
     if GET method: render the update.html form-page
-    if POST method: get updated info and write to data file"""
+    if POST method: get updated info and write to data file
+    """
     posts = get_posts()
     post = get_post_by_id(posts, post_id)
 
@@ -101,4 +106,4 @@ def like(post_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
